@@ -1,0 +1,82 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:1@localhost:5432/baitap/mydb?schema=public"
+}
+model profile1{
+  id Int @id @default(autoincrement())
+  ten String
+  sdt String
+  congviec String
+  hinhnen String
+  daidien String
+  thongtin1 String
+  thongtin2 String
+  gmail String
+}
+
+model education{
+  id Int @id @default(autoincrement())
+  nam Int
+  bangcap String
+  daihoc String
+  diachi String
+  thongtin String
+}
+
+model skills{
+  id Int @id @default(autoincrement())
+  ten String
+  phantram Int
+}
+
+model experience{
+  id Int @id @default(autoincrement())
+  nam Int
+  vitricv String
+  tencongty String
+  diachi String
+  mota String
+}
+
+model profile2{ 
+   id Int @id @default(autoincrement())
+  tenweb String
+  icon String
+  link String
+}
+
+model client{
+    id Int @id @default(autoincrement())
+  ten String
+  logo String
+}
+ model duan{
+    id Int @id @default(autoincrement())
+  ten String
+  hinhanh String
+ }
+
+model contact{
+id Int @id @default(autoincrement())
+ten String
+email String
+tieude String
+loinhan String
+}
+
+ model soicial{
+  id Int @id @default(autoincrement())
+  ten String
+  link String
+  logo String
+ }
